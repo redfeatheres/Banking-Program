@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // DECLARE VARIABLES
+        User user = new User("John", 1000);
         Scanner scanner = new Scanner(System.in);
-        double balance;
         boolean isRunning = true;
         int choice;
 
@@ -24,11 +24,11 @@ public class Main {
         while (choice != 4) {
             switch (choice) {
                 case 1:
-                    showBalance();
+                    user.showBalance();
                 case 2:
-                    deposit();
+                    user.deposit();
                 case 3:
-                    withdraw();
+                    user.withdraw();
                 case 4:
                     System.out.println("See you next time!");
                 default:
