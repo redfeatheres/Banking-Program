@@ -21,7 +21,23 @@ public class Main {
         choice = scanner.nextInt();
 
         // GET AND PROCESS USERS CHOICE
-      
+        while (choice != 4) {
+            switch (choice) {
+                case 1:
+                    showBalance();
+                case 2:
+                    deposit();
+                case 3:
+                    withdraw();
+                case 4:
+                    System.out.println("See you next time!");
+                default:
+                    System.out.println("There is no such option. '\n' XXXXXXXXXXXXX");
+            }
+
+            System.out.println("CHOOSE AN OPTION: ");
+            choice = scanner.nextInt();
+        }
 
         // showBalance
 
