@@ -25,26 +25,19 @@ public class Main {
             switch (choice) {
                 case 1:
                     user.showBalance();
+                    break;
                 case 2:
                     user.deposit();
+                    break;
                 case 3:
-                    user.withdraw();
-                case 4:
-                    System.out.println("See you next time!");
+                    user.withDraw();
+                    break;
                 default:
                     System.out.println("There is no such option. '\n' XXXXXXXXXXXXX");
             }
-
             System.out.println("CHOOSE AN OPTION: ");
             choice = scanner.nextInt();
         }
-
-        // showBalance
-
-        // deposit()
-
-        // withdraw()
-
-        // EXIT MSG
+        System.out.println("See you next time!");
     }
 }
