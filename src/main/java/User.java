@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class User {
+
     private double balance = 0;
     private String name = "";
     Scanner scanner = new Scanner(System.in);
@@ -8,6 +9,14 @@ public class User {
     public User(String name, double balance) {
         this.balance = balance;
         this.name = name;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void showBalance() {
