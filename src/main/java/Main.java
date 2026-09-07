@@ -8,6 +8,7 @@ public class Main {
         boolean isRunning = true;
         int choice;
 
+        // DISPLAY MENU
         System.out.println("_______________");
         System.out.println("BANKING PROGRAM");
         System.out.println("_______________");
@@ -18,13 +19,9 @@ public class Main {
 
         System.out.println("CHOOSE AN OPTION: ");
         choice = scanner.nextInt();
-        while (choice != 4) {
-            
-        }
-
-        // DISPLAY MENU
 
         // GET AND PROCESS USERS CHOICE
+      
 
         // showBalance
 
