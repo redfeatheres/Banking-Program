@@ -1,10 +1,9 @@
-import java.util.Scanner;
+import java.io.Serializable;
 
-public class User {
+public class User implements Serializable {
 
-    private double balance = 0;
-    private String name = "";
-    Scanner scanner = new Scanner(System.in);
+    private double balance;
+    private String name;
 
     public User(String name, double balance) {
         this.balance = balance;
@@ -19,28 +18,21 @@ public class User {
         return name;
     }
 
-    public void showBalance() {
-        System.out.println(name + " balance: " + balance);
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
-    public void deposit() {
-        System.out.println("Enter the amount to deposit: ");
-        int amount = scanner.nextInt();
-        balance += amount;
-        System.out.println("You deposited: " + amount);
-        showBalance();
-    }
-
-    public void withDraw() {
-        System.out.println("Enter the amount to withdraw: ");
-        int amount = scanner.nextInt();
-        if(amount <= balance) {
-            System.out.println("You withdrew: " + amount);
-            balance -= amount;
-            showBalance();
-        } else {
-            System.out.println("Not enough funds on the account.");
-            showBalance();
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
         }
+    }
+
+    public boolean withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            return true;
+        }
+        return false;
     }
 }
